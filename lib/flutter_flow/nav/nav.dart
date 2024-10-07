@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/index.dart';
 import '/main.dart';
@@ -36,12 +38,38 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => HomePageWidget(),
+      errorBuilder: (context, state) => appStateNotifier.showSplashImage
+          ? Builder(
+              builder: (context) => Container(
+                color: Color(0xFFD9CFCB),
+                child: Center(
+                  child: Image.asset(
+                    'assets/images/ddcb16d2-2f04-4d70-9dcb-18c1afbf6615.jpg',
+                    width: MediaQuery.sizeOf(context).width * 0.6,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            )
+          : HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => HomePageWidget(),
+          builder: (context, _) => appStateNotifier.showSplashImage
+              ? Builder(
+                  builder: (context) => Container(
+                    color: Color(0xFFD9CFCB),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/ddcb16d2-2f04-4d70-9dcb-18c1afbf6615.jpg',
+                        width: MediaQuery.sizeOf(context).width * 0.6,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                )
+              : HomePageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -118,6 +146,8 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    List<String>? collectionNamePath,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -135,6 +165,8 @@ class FFParameters {
       param,
       type,
       isList,
+      collectionNamePath: collectionNamePath,
+      structBuilder: structBuilder,
     );
   }
 }
