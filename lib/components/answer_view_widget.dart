@@ -9,7 +9,7 @@ export 'answer_view_model.dart';
 class AnswerViewWidget extends StatefulWidget {
   const AnswerViewWidget({
     super.key,
-    required this.answerParameter,
+    this.answerParameter,
   });
 
   final String? answerParameter;
