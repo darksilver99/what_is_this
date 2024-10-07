@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>622357353461-c0n5jq9a2uchfi3fhpsiaat5a131gjig.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.622357353461-c0n5jq9a2uchfi3fhpsiaat5a131gjig</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>622357353461-1ivgfmjqaru1rf2vnt0vjichdb8goitu.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDWXh2tc_-2QR-8vguRLbqPV93zLYjuTBE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>622357353461</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.silver.whatisthis</string>
+	<key>PROJECT_ID</key>
+	<string>silver-65166</string>
+	<key>STORAGE_BUCKET</key>
+	<string>silver-65166.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:622357353461:ios:0d6d2241abbac7ceb4c6bc</string>
+</dict>
+</plist>
