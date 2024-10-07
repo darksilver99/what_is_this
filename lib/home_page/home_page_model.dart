@@ -41,7 +41,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
     await geminiTextFromImage(
       context,
-      'ช่วยบอกหน่อยว่ารูปภาพนี้คืออะไรและอธิบายรายเอียดเล็กน้อยด้วย',
+      'ช่วยบอกหน่อยว่ารูปภาพนี้คืออะไรและอธิบายรายเอียดเล็กน้อยด้วยขอเป็นภาษาไทย',
       uploadImageBytes: uploadedLocalFile1,
     ).then((generatedText) {
       aiResult = generatedText;
