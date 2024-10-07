@@ -12,7 +12,7 @@ Future<String?> geminiGenerateText(
   String prompt,
 ) async {
   final model =
-      GenerativeModel(model: 'gemini-1.5-pro', apiKey: _kGeminiApiKey);
+      GenerativeModel(model: 'gemini-1.5-flash-latest', apiKey: _kGeminiApiKey);
   final content = [Content.text(prompt)];
 
   try {
@@ -32,7 +32,7 @@ Future<String?> geminiCountTokens(
   String prompt,
 ) async {
   final model =
-      GenerativeModel(model: 'gemini-1.5-pro', apiKey: _kGeminiApiKey);
+      GenerativeModel(model: 'gemini-1.5-flash-latest', apiKey: _kGeminiApiKey);
   final content = [Content.text(prompt)];
 
   try {
@@ -84,10 +84,11 @@ Future<String?> geminiTextFromImage(
     final response = await model.generateContent(content);
     return response.text;
   } catch (e) {
-    showSnackbar(
+    print("eeeee : ${e.toString()}");
+    /*showSnackbar(
       context,
       e.toString(),
-    );
+    );*/
     return null;
   }
 }
