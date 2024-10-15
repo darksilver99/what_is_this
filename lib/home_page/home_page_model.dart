@@ -61,6 +61,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
             padding: MediaQuery.viewInsetsOf(context),
             child: AnswerViewWidget(
               answerParameter: aiResult,
+              image: image!,
             ),
           ),
         );

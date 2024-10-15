@@ -210,7 +210,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     color: Color(0x59000000),
                   ),
                   child: Lottie.asset(
-                    'assets/lottie_animations/Animation_-_1728285980280.json',
+                    'assets/jsons/Animation_-_1728285980280.json',
                     width: 200.0,
                     height: 200.0,
                     fit: BoxFit.contain,
